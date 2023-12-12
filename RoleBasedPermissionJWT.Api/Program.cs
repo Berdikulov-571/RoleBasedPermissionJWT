@@ -1,3 +1,6 @@
+using RoleBasedPermissionJWT.DataAcess;
+using RoleBasedPermissionJWT.Service;
+
 namespace RoleBasedPermissionJWT.Api
 {
     public class Program
@@ -9,6 +12,9 @@ namespace RoleBasedPermissionJWT.Api
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddService();
+            builder.Services.AddDataAccess(builder.Configuration);
 
             var app = builder.Build();
 
