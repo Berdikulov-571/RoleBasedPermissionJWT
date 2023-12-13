@@ -13,7 +13,7 @@ namespace RoleBasedPermissionJWT.Domain.Entities
         public string PasswordHash { get; set; }
         public string Salt { get; set; }
         public string? RefreshToken { get; set; }
-        public DateTime RefreshTokenExpireDate { get; set; }
+        public DateTime? RefreshTokenExpireDate { get; set; }
 
         public ICollection<Role> Roles { get; set; }
     }
